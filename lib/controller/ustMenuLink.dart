@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-var listLink = {'Diziler', 'Filmler', 'Listem'};
-
-Row ustMenuLink(double scwidth, var context) {
+var listLink = [
+  {'Diziler', 'Filmler', 'Listem'}
+];
+Row ustMenuLink(double scwidth, var c) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
@@ -11,12 +12,12 @@ Row ustMenuLink(double scwidth, var context) {
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return Container(
-            color: Colors.purple,
+          
             alignment: Alignment.center,
             margin: EdgeInsets.all(1),
             width: scwidth * .3,
             child: Text(
-              '$listLink[0]',
+              'Diziler',
               style: GoogleFonts.roboto(
                 color: Colors.white,
                 fontSize: 20,
