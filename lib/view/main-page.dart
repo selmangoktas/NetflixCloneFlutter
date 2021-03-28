@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:netflix_clone/controller/values.dart';
+import 'package:netflix_clone/controller/replace.dart';
+import 'package:netflix_clone/controller/ustMenu.dart';
+import 'package:netflix_clone/controller/ustMenuLink.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -15,54 +16,28 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: Row(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            color: Colors.black,
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: .1),
-            padding: EdgeInsets.all(.1),
-            width: scwidth,
-            height: scHeight * .1,
-            child: Row(
-              children: [
-                Container(
-                  width: scwidth * .1,
-                  height: scHeight * .1,
-                  child: SvgPicture.asset(
-                    logo,
-                    color: Colors.red,
-                    semanticsLabel: 'A red up arrow',
-                  ),
-                ),
-                SizedBox(
-                  width: scwidth * .5,
-                ),
-                Container(
-                    width: scwidth * .1,
-                    child: Icon(
-                      Icons.cast_connected,
-                      color: Colors.white,
-                    )),
-                Container(
-                  width: scwidth * .1,
-                  height: scHeight * .1,
-                  child: Icon(
-                    Icons.home,
-                    color: Colors.white,
-                  ),
-                ),
-                Container(
-                  width: scwidth * .1,
-                  height: scHeight * .1,
-                  child: Image(
-                    image: DecorationImage(
-                      image: AssetImage('name'),
+          Column(
+            children: [
+              ustMenuBuild(scwidth, scHeight),
+              ustMenuLink(scwidth, context),
+              Container(
+                margin: EdgeInsets.zero,
+                width: scwidth,
+                height: scHeight * .689,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      httpsCevirme(
+                          'http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg'),
                     ),
+                    fit: BoxFit.contain,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^0.19.3
+  google_fonts: ^2.0.0
 
   cupertino_icons: ^1.0.2
 
@@ -24,3 +25,4 @@ flutter:
   assets:
     - assets/films/
     - assets/logo/
+    - assets/profil/
