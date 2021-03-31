@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 final String logo = 'assets/logo/logo.svg';
+final String playBtn = 'assets/others/player_button_overlay.png';
 //profil
 final String child = 'assets/profil/child.svg';
 final String girlChild = 'assets/profil/girl-child.svg';

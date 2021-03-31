@@ -1,4 +1,3 @@
-
 import 'package:netflix_clone/controller/export.dart';
 
 SliverToBoxAdapter buildFilmListView(
@@ -67,9 +66,6 @@ SliverToBoxAdapter buildFilmListView(
   );
 }
 
-
-
-
 SliverToBoxAdapter buildFilmListView1(
     List<Map<String, Object>> filmler, String baslik) {
   return SliverToBoxAdapter(
@@ -97,12 +93,16 @@ SliverToBoxAdapter buildFilmListView1(
                 width: 120,
                 //color: Colors.pink[900],
                 child: Container(
-                  alignment: Alignment.bottomRight,
-                  margin: EdgeInsets.only(bottom: 5, right: 5),
-                  child: Text(
-                    '',
-                    // filmler[index]['Title'],
-                    style: GoogleFonts.darkerGrotesque(color: Colors.white),
+                  height: 120,
+                  width: 120,
+
+                  alignment: Alignment.center,
+                  //margin: EdgeInsets.only(bottom: 5, right: 5),
+                  child: Image.asset(
+                    playBtn,
+                    color: Colors.lightGreenAccent[50],
+                    alignment: Alignment.center,
+                    //color: Colors.black.withOpacity(1.0),
                   ),
                 ),
                 decoration: BoxDecoration(
