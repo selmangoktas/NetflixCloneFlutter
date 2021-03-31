@@ -14,3 +14,5 @@ String urlEkle(String metin) {
   sonuc = 'https://image.tmdb.org/t/p/original/'+metin;
   return sonuc;
 }
+
+
