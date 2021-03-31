@@ -48,7 +48,7 @@ var films = [
     "Country": "USA",
     "Awards": "9 wins & 21 nominations.",
     "Poster":
-        "http://ia.media-imdb.com/images/M/MV5BMTU4NzMyNDk1OV5BMl5BanBnXkFtZTcwOTEwMzU1MQ@@._V1_SX300.jpg",
+        "https://i.pinimg.com/474x/31/6e/1d/316e1dcfc90215bae92b9d89501903ca.jpg",
     "Metascore": "65",
     "imdbRating": "7.2",
     "imdbVotes": "533,874",

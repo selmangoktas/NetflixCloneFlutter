@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:netflix_clone/controller/replace.dart';
-import 'package:netflix_clone/controller/ustMenu.dart';
-import 'package:netflix_clone/controller/ustMenuLink.dart';
+import 'package:netflix_clone/controller/export.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -14,32 +11,55 @@ class _MainPageState extends State<MainPage> {
     var scwidth = MediaQuery.of(context).size.width;
     var scHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Column(
-            children: [
-              ustMenuBuild(scwidth, scHeight),
-              ustMenuLink(scwidth, context),
-              Container(
-                margin: EdgeInsets.zero,
-                width: scwidth,
-                height: scHeight * .689,
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              toolbarHeight: 40,
+              brightness: Brightness.dark,
+              pinned: false,
+              primary: true,
+              backgroundColor: Colors.black.withOpacity(0),
+              flexibleSpace: FlexibleSpaceBar(
+                titlePadding: EdgeInsets.only(left: 0, right: 0, top: 0),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ustMenuBuild(scwidth, scHeight),
+                  ],
+                ),
+              ),
+            ),
+            SliverAppBar(
+              toolbarHeight: 40,
+              brightness: Brightness.dark,
+              pinned: true,
+              primary: true,
+              backgroundColor: Colors.black.withOpacity(0),
+              flexibleSpace: FlexibleSpaceBar(
+                titlePadding: EdgeInsets.only(left: 0, right: 0, top: 0),
+                title: ustMenuLink(scwidth),
+              ),
+            ),
+            SliverStretchHeader(
+              minBlankExtent: 300,
+              background: Container(
                 decoration: BoxDecoration(
-                  color: Colors.red,
                   image: DecorationImage(
                     image: NetworkImage(
-                      httpsCevirme(
-                          'http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg'),
-                    ),
-                    fit: BoxFit.contain,
+                        'https://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg'),
                   ),
                 ),
               ),
-            ],
-          ),
-        ],
+              child: Container(
+                color: Colors.green.withOpacity(.5),
+                height: 60,
+                child: Center(child: Text("Child Widget")),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
