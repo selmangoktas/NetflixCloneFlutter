@@ -59,14 +59,17 @@ class _MainPageState extends State<MainPage> {
                 child: Center(child: Text("Child Widget")),
               ),
             ),
-            buildFilmListView(films),
-            buildFilmListView(films),
-            buildFilmListView(films),
-            buildFilmListView(films),
-            buildFilmListView(films),
+            buildFilmListView(trendFilms, 'Listem'),
+            buildFilmListView(tvShow, 'Populer'),
+            //buildFilmListView(personalFilms, 'Macera'),
+            buildFilmListView(trendFilms, 'Aksiyon'),
+            buildFilmListView(trendFilms, 'Diziler'),
+            buildFilmListView(trendFilms, 'Yerli ve Popüler'),
+            buildFilmListView(trendFilms, 'Aile Sineması'),
           ],
         ),
       ),
+      bottomNavigationBar: bottomNavigationBuild(scHeight),
     );
   }
 } //

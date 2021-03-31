@@ -14,3 +14,9 @@ const TextStyle beyazYazi = const TextStyle(
 
 const TextStyle siyahYazi = const TextStyle(
     color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20.0);
+
+const TextStyle beyazYaziKucuk = const TextStyle(
+    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 15.0);
+
+const TextStyle siyahYaziKucuk = const TextStyle(
+    color: Colors.black, fontWeight: FontWeight.w700, fontSize: 15.0);

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-var listLink = [
-  'Diziler',
-  'Filmler',
-  'Listem',
-];
+var listLink = ['Diziler', 'Filmler', 'Listem', ''];
 
 Row ustMenuLink(double scwidth) {
   return Row(
