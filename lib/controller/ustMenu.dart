@@ -4,7 +4,7 @@ import 'package:netflix_clone/controller/values.dart';
 
 Container ustMenuBuild(double scwidth, double scHeight) {
   return Container(
-    color: Colors.black,
+    //color: Colors.red,
     alignment: Alignment.topLeft,
     padding: EdgeInsets.only(top: 0, right: 0),
     width: scwidth,

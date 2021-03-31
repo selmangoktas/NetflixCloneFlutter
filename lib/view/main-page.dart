@@ -21,7 +21,7 @@ class _MainPageState extends State<MainPage> {
               brightness: Brightness.dark,
               pinned: false,
               primary: true,
-              backgroundColor: Colors.black.withOpacity(0),
+              // backgroundColor: Colors.black.withOpacity(0),
               flexibleSpace: FlexibleSpaceBar(
                 titlePadding: EdgeInsets.only(left: 0, right: 0, top: 0),
                 title: Row(
@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
             ),
             SliverAppBar(
               toolbarHeight: 40,
-              brightness: Brightness.dark,
+              //brightness: Brightness.dark,
               pinned: true,
               primary: true,
               backgroundColor: Colors.black.withOpacity(0),
@@ -46,8 +46,10 @@ class _MainPageState extends State<MainPage> {
             SliverStretchHeader(
               minBlankExtent: scHeight * .5,
               background: Container(
+                margin: EdgeInsets.only(top: 1),
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                    colorFilter: ColorFilter.linearToSrgbGamma(),
                     fit: BoxFit.cover,
                     image: NetworkImage(
                         'https://i.pinimg.com/474x/31/6e/1d/316e1dcfc90215bae92b9d89501903ca.jpg'),
@@ -62,11 +64,11 @@ class _MainPageState extends State<MainPage> {
             ),
             buildFilmListView(trendFilms, 'Listem'),
             buildFilmListView(tvShow, 'Populer'),
-            //buildFilmListView(personalFilms, 'Macera'),
-            buildFilmListView(trendFilms, 'Aksiyon'),
-            buildFilmListView(trendFilms, 'Diziler'),
-            buildFilmListView(trendFilms, 'Yerli ve Popüler'),
-            buildFilmListView(trendFilms, 'Aile Sineması'),
+            buildFilmListView1(personalFilms, 'Selman İzlemeye Devam Et'),
+            buildFilmListView(action, 'Aksiyon'),
+            buildFilmListView(season, 'Diziler'),
+            buildFilmListView(popular, 'Yerli ve Popüler'),
+            buildFilmListView(family, 'Aile Sineması'),
           ],
         ),
       ),

@@ -15,3 +15,7 @@ export 'package:netflix_clone/view/bottom-bar.dart';
 export 'package:netflix_clone/model/tv-show.dart';
 export 'package:netflix_clone/model/trendFilms.dart';
 export 'package:netflix_clone/model/personal.dart';
+export 'package:netflix_clone/model/family.dart';
+export 'package:netflix_clone/model/season.dart';
+export 'package:netflix_clone/model/popular.dart';
+export 'package:netflix_clone/model/action.dart';
