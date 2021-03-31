@@ -44,12 +44,13 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             SliverStretchHeader(
-              minBlankExtent: 300,
+              minBlankExtent: scHeight * .5,
               background: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                    fit: BoxFit.cover,
                     image: NetworkImage(
-                        'https://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg'),
+                        'https://i.pinimg.com/474x/31/6e/1d/316e1dcfc90215bae92b9d89501903ca.jpg'),
                   ),
                 ),
               ),

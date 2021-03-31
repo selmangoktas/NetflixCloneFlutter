@@ -5,54 +5,30 @@ Row bottomNavigationBuild(double scHeight) {
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Container(
-        margin: EdgeInsets.all(10),
-        height: scHeight * .06,
-        child: Column(
-          children: [
-            Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            Text(
-              'Home',
-              style: beyazYaziKucuk,
-            ),
-          ],
-        ),
-      ),
-      Container(
-        margin: EdgeInsets.all(10),
-        height: scHeight * .06,
-        child: Column(
-          children: [
-            Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            Text(
-              'Çok Yakında',
-              style: beyazYaziKucuk,
-            ),
-          ],
-        ),
-      ),
-      Container(
-        margin: EdgeInsets.all(10),
-        height: scHeight * .06,
-        child: Column(
-          children: [
-            Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            Text(
-              'İndirilenler',
-              style: beyazYazi,
-            ),
-          ],
-        ),
-      ),
+      containerBuild(scHeight, Icons.home_outlined, 'Anasayfa'),
+      containerBuild(scHeight, Icons.playlist_play_outlined, 'Çok Yakında'),
+      containerBuild(
+          scHeight, Icons.arrow_circle_down_outlined, 'İndirilenler'),
     ],
+  );
+}
+
+Container containerBuild(double scHeight, IconData s, String yazi) {
+  return Container(
+    alignment: Alignment.center,
+    margin: EdgeInsets.all(8),
+    height: scHeight * .06,
+    child: Column(
+      children: [
+        Icon(
+          s,
+          color: Colors.white,
+        ),
+        Text(
+          '$yazi',
+          style: beyazYaziKucuk,
+        ),
+      ],
+    ),
   );
 }

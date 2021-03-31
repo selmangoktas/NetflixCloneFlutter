@@ -6,15 +6,16 @@ Container ustMenuBuild(double scwidth, double scHeight) {
   return Container(
     color: Colors.black,
     alignment: Alignment.topLeft,
-    padding: EdgeInsets.only(top: 0),
+    padding: EdgeInsets.only(top: 0, right: 0),
     width: scwidth,
-    height: scHeight * .1,
+    height: scHeight * .15,
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
           margin: EdgeInsets.only(right: 0),
           width: scwidth * .1,
-          height: scHeight * .1,
+          height: scHeight * .04,
           child: SvgPicture.asset(
             logo,
           ),
@@ -38,7 +39,7 @@ Container ustMenuBuild(double scwidth, double scHeight) {
         ),
         Container(
           width: scwidth * .1,
-          height: scHeight * .1,
+          height: scHeight * .03,
           child: SvgPicture.asset(
             tie,
           ),
