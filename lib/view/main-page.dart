@@ -14,6 +14,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: CustomScrollView(
+          //shrinkWrap: true,
           slivers: [
             SliverAppBar(
               toolbarHeight: 40,
@@ -58,6 +59,11 @@ class _MainPageState extends State<MainPage> {
                 child: Center(child: Text("Child Widget")),
               ),
             ),
+            buildFilmListView(films),
+            buildFilmListView(films),
+            buildFilmListView(films),
+            buildFilmListView(films),
+            buildFilmListView(films),
           ],
         ),
       ),
