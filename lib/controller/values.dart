@@ -1,5 +1,10 @@
 //logo
+
 import 'package:flutter/material.dart';
+/*
+BuildContext x;
+final double scwidth = MediaQuery.of(x).size.width;
+final double scHeight = MediaQuery.of(x).size.height;*/
 
 final String logo = 'assets/logo/logo.svg';
 final String playBtn = 'assets/others/player_button_overlay.png';

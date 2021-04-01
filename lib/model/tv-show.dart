@@ -16,23 +16,6 @@ var tvShow = [
     "popularity": 3876.965,
     "media_type": "tv"
   },
-    {
-    "origin_country": ["US"],
-    "name": "Game of Thrones",
-    "genre_ids": [10765, 18, 10759],
-    "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
-    "original_language": "en",
-    "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-    "id": 1399,
-    "first_air_date": "2011-04-17",
-    "vote_average": 8.4,
-    "vote_count": 13694,
-    "overview":
-        "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-    "original_name": "Game of Thrones",
-    "popularity": 409.617,
-    "media_type": "tv"
-  },
   {
     "original_name": "Superman & Lois",
     "first_air_date": "2021-02-23",

@@ -5,7 +5,7 @@ Row bottomNavigationBuild(double scHeight) {
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      containerBuild(scHeight, Icons.home_outlined, 'Anasayfa'),
+      containerBuild(scHeight, Icons.house, 'Anasayfa'),
       containerBuild(scHeight, Icons.playlist_play_outlined, 'Çok Yakında'),
       containerBuild(
           scHeight, Icons.arrow_circle_down_outlined, 'İndirilenler'),

@@ -44,26 +44,48 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             SliverStretchHeader(
-              minBlankExtent: scHeight * .5,
-              background: Container(
-                margin: EdgeInsets.only(top: 1),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: NetworkImage(
-                        'https://image.tmdb.org/t/p/original//EsLZoT8oHhQlGd1QpdbnvnwTzO.jpg'),
+              minBlankExtent: 450,
+              background: Stack(
+                children: [
+                  ShaderMask(
+                    shaderCallback: (rect) {
+                      return LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.black.withOpacity(.7),
+                          Colors.black.withOpacity(.5),
+                          Colors.black.withOpacity(.3),
+                          Colors.black.withOpacity(.2),
+                          Colors.black.withOpacity(.1),
+                          Colors.black.withOpacity(1),
+                        ],
+                      ).createShader(
+                          Rect.fromLTRB(0, -140, rect.width, rect.height - 20));
+                    },
+                    blendMode: BlendMode.darken,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(
+                            "https://image.tmdb.org/t/p/original///4ZSzEDVdxWVMVO4oZDvoodQOEfr.jpg",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
               child: buildMiddleButton(scwidth, scHeight),
             ),
-             buildFilmListView(trendFilms, 'Listem'),
+            buildFilmListView(trendFilms, 'Listem'),
             buildFilmListView(tvShow, 'Populer'),
             buildFilmListView1(personalFilms, 'Selman İzlemeye Devam Et'),
-             buildFilmListView(action, 'Aksiyon'),
-              buildFilmListView(season, 'Diziler'),
+            buildFilmListView(action, 'Aksiyon'),
+            buildFilmListView(season, 'Diziler'),
             buildFilmListView(popular, 'Yerli ve Popüler'),
-             buildFilmListView(family, 'Aile Sineması'),
+            buildFilmListView(family, 'Aile Sineması'),
           ],
         ),
       ),

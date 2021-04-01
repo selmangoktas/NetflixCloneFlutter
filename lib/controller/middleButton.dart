@@ -4,7 +4,7 @@ Container buildMiddleButton(double scwidth, double scHeight) {
   return Container(
     alignment: Alignment.center,
     height: scHeight * .1,
-    color: Colors.teal[50].withOpacity(.1),
+    //color: Colors.teal[50].withOpacity(.1),
     padding: EdgeInsets.only(top: 3),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
