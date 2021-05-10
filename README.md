@@ -2,8 +2,7 @@
 
 Netflix Clone Project
 
-![alt text](/assets/demo/netflix1.jpg)
-![alt text](/assets/demo/netflix2.jpg)
+| <img src="/assets/demo/netflix1.jpg" width="250"> | <img src="/assets/demo/netflix2.jpg" width="250"> |
 
 ## Getting Started
 
