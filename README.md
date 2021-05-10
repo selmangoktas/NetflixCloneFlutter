@@ -1,6 +1,9 @@
 # netflix_clone
 
-A new Flutter project.
+Netflix Clone Project
+
+![alt text](/assets/demo/netflix1.jpg)
+![alt text](/assets/demo/netflix2.jpg)
 
 ## Getting Started
 
